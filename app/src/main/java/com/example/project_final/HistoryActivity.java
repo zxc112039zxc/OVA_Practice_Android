@@ -29,4 +29,12 @@ public class HistoryActivity extends AppCompatActivity {
         historyRecyclerView.setAdapter(historyRecyclerViewAdapter);
         historyRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
     }
+
+    @Override
+    public void onRestart()
+    {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
+    }
 }

@@ -29,4 +29,12 @@ public class FavoriteActivity extends AppCompatActivity {
 
         favoriteRecyclerViewAdapter.getFilter().filter("favorite");
     }
+
+    @Override
+    public void onRestart()
+    {
+        super.onRestart();
+        finish();
+        startActivity(getIntent());
+    }
 }
