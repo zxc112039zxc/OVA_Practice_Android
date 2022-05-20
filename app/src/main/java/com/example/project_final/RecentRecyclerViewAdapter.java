@@ -47,8 +47,8 @@ public class RecentRecyclerViewAdapter extends RecyclerView.Adapter<RecentRecycl
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(itemView.getContext(), arrayList.get(getAdapterPosition()).getProblemName()
-                    , Toast.LENGTH_SHORT).show();
+//            Toast.makeText(itemView.getContext(), arrayList.get(getAdapterPosition()).getProblemName()
+//                    , Toast.LENGTH_SHORT).show();
             Bundle bundle = new Bundle();
             bundle.putString("problemName", arrayList.get(getAdapterPosition()).getProblemName());
             v.getContext().startActivity(new Intent(v.getContext(), ProblemActivity.class).putExtras(bundle));
