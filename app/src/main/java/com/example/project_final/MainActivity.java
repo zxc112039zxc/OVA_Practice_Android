@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tvDailyNumber, tvDailyProblem;
     SearchView searchView;
     DBHelper mDBHelper;
-    int randomIndex = -1;
+    int randomIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,9 +82,7 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-        if (randomIndex == -1) {
-            randomIndex = new Random().nextInt(problemArrayList.size());
-        }
+        randomIndex = new Random().nextInt(problemArrayList.size());
         tvDailyNumber.setText(problemArrayList.get(randomIndex).getProblemNumber());
         tvDailyProblem.setText(problemArrayList.get(randomIndex).getProblemName());
 
